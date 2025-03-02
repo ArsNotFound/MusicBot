@@ -105,11 +105,11 @@
                 </exclusion>
                 <exclusion>
                     <groupId>org.seleniumhq.selenium</groupId>
-                    <artifactId>selenium-devtools-v129</artifactId>
+                    <artifactId>selenium-devtools-v131</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>org.seleniumhq.selenium</groupId>
-                    <artifactId>selenium-devtools-v130</artifactId>
+                    <artifactId>selenium-devtools-v132</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
