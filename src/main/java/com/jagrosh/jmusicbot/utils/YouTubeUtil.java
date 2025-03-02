@@ -105,10 +105,14 @@ public class YouTubeUtil {
 
         chromeOptions.setBinary(userChromePath != null ? userChromePath : wdm.getBrowserPath().get().toString());
 
-        if (!headless)
+        if (!headless) {
             chromeOptions.addArguments("--auto-open-devtools-for-tabs");
-        else
+        } else {
             chromeOptions.addArguments("--headless=new");
+            chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("--disable-software-rasterizer");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+        }
 
         ChromeDriverService.Builder chromeDriverBuilder = new ChromeDriverService.Builder();
         if (LOGGER.isDebugEnabled())
